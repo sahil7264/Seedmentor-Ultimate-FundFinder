@@ -6,6 +6,7 @@ import sendMail from '../scripts/sendMail.js'
 dotenv.config()
 const createUser = async (req, res) => {
 	try {
+		console.log(req.body)
 		const { first_name, last_name, email, password,whatsapp_number } = req.body
 		const user = await User.findOne({ email })
 		if (user) {

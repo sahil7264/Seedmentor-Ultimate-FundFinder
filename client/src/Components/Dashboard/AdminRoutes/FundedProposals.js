@@ -15,7 +15,7 @@ import { useNavigate } from 'react-router-dom';
 
 function FundedProposals() {
 
-  const baseUrl = "http://localhost:3000/api/funding/";
+  const baseUrl = "https://seedmentor.onrender.com/api/funding/";
   const [data, setData] = useState([])
 
   const navigate = useNavigate();

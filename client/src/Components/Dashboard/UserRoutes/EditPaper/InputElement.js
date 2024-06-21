@@ -40,7 +40,7 @@ function InputElement(props) {
   const handleSave = async () => {
     setIsSaving(true);
     let url =
-      "http://localhost:3000/api/proposal/update/" + props.id;
+      "https://seedmentor.onrender.com/api/proposal/update/" + props.id;
     let response = await fetch(url, {
       method: "PUT",
       headers: {
@@ -83,7 +83,7 @@ function InputElement(props) {
   const handleDelete = async () => {
     setIsDeleting(true);
     let url =
-      "http://localhost:3000/api/proposal/delete/" + props.id;
+      "https://seedmentor.onrender.com/api/proposal/delete/" + props.id;
     let response = await fetch(url, {
       method: "DELETE",
       headers: {

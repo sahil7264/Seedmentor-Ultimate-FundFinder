@@ -5,7 +5,7 @@ import { useFetch } from "../../../../Hooks/useFetch";
 import DraftItem from "./DraftItem";
 
 function Drafts() {
-  let url = "http://localhost:3000/api/proposal/draft";
+  let url = "https://seedmentor.onrender.com/api/proposal/draft";
   const { data, isLoading, error } = useFetch(url, "GET");
   if (error) {
     alert(error);

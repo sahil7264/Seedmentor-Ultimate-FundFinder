@@ -5,7 +5,7 @@ import { Button, Flex } from "@chakra-ui/react";
 function Level1Report(props) {
   const ref = React.createRef();
   let url =
-    "http://localhost:3000/api/plagiarism/levelOne/" + props.id;
+    "https://seedmentor.onrender.com/api/plagiarism/levelOne/" + props.id;
   const { data, isLoading, error } = useFetch(url, "POST");
   return (<>
     <Pdf targetRef={ref} filename="report.pdf">

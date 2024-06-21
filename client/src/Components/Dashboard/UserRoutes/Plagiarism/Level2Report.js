@@ -5,7 +5,7 @@ import Pdf from 'react-to-pdf'
 function Level2Report(props) {
   const ref = React.createRef();
   let url =
-    "http://localhost:3000/api/plagiarism/levelTwo/" + props.id;
+    "https://seedmentor.onrender.com/api/plagiarism/levelTwo/" + props.id;
   const { data, isLoading, error } = useFetch(url, "POST");
   console.log(data);
   return (<>

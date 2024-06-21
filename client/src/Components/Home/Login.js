@@ -51,7 +51,7 @@ function Login(props) {
     } else {
       myData.email = email;
       myData.password = password;
-      let url = "http://localhost:3000/api/user/login";
+      let url = "https://seedmentor.onrender.com/api/user/login";
       let response = await fetch(url, {
         method: "POST",
         headers: {

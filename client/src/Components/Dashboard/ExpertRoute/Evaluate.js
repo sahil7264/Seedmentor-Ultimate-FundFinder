@@ -35,14 +35,14 @@ function Evaluate() {
   });
   let myObj = { ...obj };
   // TO GET THE DOCUMENT
-  let url = "http://localhost:3000/api/expert/all";
+  let url = "https://seedmentor.onrender.com/api/expert/all";
   const { data, isLoading, error } = useFetch(url, "GET");
 
   //   TO POST THE MARKS AND REVIEWS TO THE ADMIN
   const handleSubmit = async (paper) => {
     setIsSubmitting(true);
     console.log(myObj)
-    let url = "http://localhost:3000/api/expert/verify/" + paper.cid;
+    let url = "https://seedmentor.onrender.com/api/expert/verify/" + paper.cid;
     let response = await fetch(url, {
       method: "POST",
       headers: {

@@ -17,7 +17,7 @@ function ShowEntryPoint() {
     "methodology",
     "bibliography",
   ];
-  let url = "http://localhost:3000/api/proposal/submitted/"+cid;
+  let url = "https://seedmentor.onrender.com/api/proposal/submitted/"+cid;
   console.log(url);
   const { data, isLoading, error} = useFetch(url,"GET");
   console.log(data);

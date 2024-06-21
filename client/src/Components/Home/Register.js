@@ -69,7 +69,7 @@ function Register(props) {
         });
         setIsSubmitting(false);
       } else {
-        let url = "http://localhost:3000/api/user/create";
+        let url = "https://seedmentor.onrender.com/api/user/create";
         let response = await fetch(url, {
           method: "POST",
           headers: {

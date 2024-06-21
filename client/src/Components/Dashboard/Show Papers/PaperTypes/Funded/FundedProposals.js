@@ -3,7 +3,7 @@ import React from 'react'
 import { useFetch } from '../../../../Hooks/useFetch';
 import FundedItem from './FundedItem';
 function FundedProposals() {
-    let url ="http://localhost:3000/api/funding/user"
+    let url ="https://seedmentor.onrender.com/api/funding/user"
     const { data, isLoading, error} = useFetch(url,"GET");
   return (
     <>

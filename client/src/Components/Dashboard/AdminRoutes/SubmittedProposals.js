@@ -42,7 +42,7 @@ import { useNavigate } from 'react-router-dom';
 function SubmittedProposals() {
   let toast = useToast();
   const navigate = useNavigate();
-  const baseUrl = "http://localhost:3000/api/proposal/submitted";
+  const baseUrl = "https://seedmentor.onrender.com/api/proposal/submitted";
   const [data, setData] = useState([])
 
   const [evaluator, setEvaluatorScores] = useState([])
@@ -81,10 +81,10 @@ function SubmittedProposals() {
   }, []);
 
 
-  const fundUrl = "http://localhost:3000/api/funding/give/"
-  const rejectUrl = "http://localhost:3000/api/funding/reject/"
-  const expertUrl = "http://localhost:3000/api/funding/send-to-experts/"
-  const evaluatorUrl = "http://localhost:3000/api/funding/scores/"
+  const fundUrl = "https://seedmentor.onrender.com/api/funding/give/"
+  const rejectUrl = "https://seedmentor.onrender.com/api/funding/reject/"
+  const expertUrl = "https://seedmentor.onrender.com/api/funding/send-to-experts/"
+  const evaluatorUrl = "https://seedmentor.onrender.com/api/funding/scores/"
 
   const rejectProposal = async (cid) => {
     const response = await fetch(rejectUrl + cid,

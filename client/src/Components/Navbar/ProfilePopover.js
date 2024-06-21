@@ -29,7 +29,7 @@ function ProfilePopover() {
   useEffect(() => {
     setIsLoading(true);
     let fetchData = async () => {
-      let url = "http://localhost:3000/api/user/";
+      let url = "https://seedmentor.onrender.com/api/user/";
       let response = await fetch(url, {
         method: "GET",
         headers: {

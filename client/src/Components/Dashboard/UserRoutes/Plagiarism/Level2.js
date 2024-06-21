@@ -17,7 +17,7 @@ function Level2(props) {
   const navigate = useNavigate();
   const toast = useToast();
   let url =
-    "http://localhost:3000/api/plagiarism/levelTwo/" + props.id;
+    "https://seedmentor.onrender.com/api/plagiarism/levelTwo/" + props.id;
   const { data, isLoading, error } = useFetch(url, "POST");
   if (error) {
     console.log(error);
@@ -36,7 +36,7 @@ function Level2(props) {
   const handleSubmit = async () => {
     setIsSubmitting(true);
     let url =
-      "http://localhost:3000/api/proposal/submit/" + props.id;
+      "https://seedmentor.onrender.com/api/proposal/submit/" + props.id;
     let response = await fetch(url, {
       method: "POST",
       headers: {

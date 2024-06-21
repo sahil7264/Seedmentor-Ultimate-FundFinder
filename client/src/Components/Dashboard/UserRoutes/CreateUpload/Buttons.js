@@ -10,7 +10,7 @@ function Buttons() {
   const fetchData = async () => {
     setIsCreating(true);
     let response = await fetch(
-      "http://localhost:3000/api/proposal/create",
+      "https://seedmentor.onrender.com/api/proposal/create",
       {
         method: "POST",
         headers: {

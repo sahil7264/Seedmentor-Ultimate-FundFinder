@@ -4,7 +4,7 @@ import { useFetch } from '../../../../Hooks/useFetch'
 import SubmittedItem from './SubmittedItem';
 
 function AllSubmittedProposals() {
-  let url = "http://localhost:3000/api/proposal/submitted-by-user"
+  let url = "https://seedmentor.onrender.com/api/proposal/submitted-by-user"
   const {data,isLoading,error} = useFetch(url,"GET");
   console.log(data);
   return (

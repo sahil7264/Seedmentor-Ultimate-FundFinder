@@ -34,7 +34,7 @@ function EditPaper() {
     "bibliography",
     "funding_amount"
   ];
-  let url = "http://localhost:3000/api/proposal/draft/" + id;
+  let url = "https://seedmentor.onrender.com/api/proposal/draft/" + id;
   const { data, isLoading, error } = useFetch(url);
   useEffect(() => {
     if (data) {

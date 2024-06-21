@@ -12,7 +12,7 @@ function Check() {
   const id = params.id;
 
   // fetching research paper values from an api
-  let url = "http://localhost:3000/api/proposal/draft/"+id;
+  let url = "https://seedmentor.onrender.com/api/proposal/draft/"+id;
   const {data,isLoading,error} = useFetch(url,"GET");
 
   // setting parameter to go to the next level

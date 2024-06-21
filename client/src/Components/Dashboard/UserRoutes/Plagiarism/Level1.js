@@ -10,7 +10,7 @@ function Level1() {
   const params = useParams();
   const id = params.id;
   let isRequired = true;
-  let url = "http://localhost:3000/api/plagiarism/levelOne/" + id;
+  let url = "https://seedmentor.onrender.com/api/plagiarism/levelOne/" + id;
   let reject = 0;
   const { data, isLoading, error } = useFetch(url, "POST");
   console.log(data);

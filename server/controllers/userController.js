@@ -25,7 +25,7 @@ const createUser = async (req, res) => {
 			return res.json({ success: false, message: 'Error Creating User.' })
 		}
 		const token = jwt.sign({ _id: newUser._id }, process.env.JWT_SECRET)
-		const link = `${process.env.HOST}/api/user/verify/${token}`
+		const link = `https://seedmentor.onrender.com/api/user/verify/${token}`
 		const mailInfo = await sendMail(email, link)
 		if (!mailInfo) {
 			return res.json({ success: false, message: 'Error Creating User.' })

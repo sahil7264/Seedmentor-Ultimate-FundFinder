@@ -16,11 +16,6 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 connectToDatabase()
-
-app.get('/', (req, res) => {
-	res.send('Welcome to SIH Backend API.')
-})
-
 app.use('/api/user', userRouter)
 app.use('/api/proposal', researchProposalRouter)
 app.use('/api/plagiarism', plagiarismRouter)

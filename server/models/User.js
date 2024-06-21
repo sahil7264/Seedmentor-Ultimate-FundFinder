@@ -11,7 +11,7 @@ const UserSchema = new Schema({
 	submitted_research_proposals: { type: Array, required: true },
 	funded_research_proposals: { type: Array, required: true },
 	verified: { type: Boolean, required: true, default: false },
-	type: { type: String, required: true, default: 'expert' },
+	type: { type: String, required: true, default: 'user' },
 	created_at: { type: Number, default: Date.now() },
 	updated_at: { type: Number, default: Date.now() }
 })

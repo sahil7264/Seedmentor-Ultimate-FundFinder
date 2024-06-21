@@ -1,7 +1,7 @@
 {
-	"name": "sih-backend",
+	"name": "seedmentor-backend",
 	"version": "1.0.0",
-	"description": "This is the backend of our SIH Project. Made and maintained by Team Web Crawlers.",
+	"description": "This is backend for seed mentor",
 	"main": "index.js",
 	"type": "module",
 	"scripts": {
@@ -11,16 +11,8 @@
 		"lint:check": "eslint .",
 		"lint:fix": "eslint --fix ."
 	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/WebCrawlers-exe/SIH-BACKEND.git"
-	},
-	"author": "Prasoon Soni",
+	"author": "Sahil Shile",
 	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/WebCrawlers-exe/SIH-BACKEND/issues"
-	},
-	"homepage": "https://github.com/WebCrawlers-exe/SIH-BACKEND#readme",
 	"dependencies": {
 		"bcrypt": "^5.0.1",
 		"bcryptjs": "^2.4.3",

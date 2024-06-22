@@ -9,9 +9,10 @@ function Home(props) {
   const navigate = useNavigate();
   useEffect(() => {
     if (sessionStorage.getItem("token")) {
-      if(sessionStorage.getItem("type")==="admin"){
-      navigate("/dashboard/admin");}
-      else{
+      if (sessionStorage.getItem("type") === "admin") {
+        navigate("/dashboard/admin");
+      }
+      else {
         navigate("/dashboard");
       }
     }

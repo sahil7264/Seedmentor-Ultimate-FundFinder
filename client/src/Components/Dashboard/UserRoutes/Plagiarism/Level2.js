@@ -99,7 +99,7 @@ function Level2(props) {
               </Flex>
               {isLoading && <Spinner size="sm" color="gray" />}
               {!isLoading && <>
-                Mean Plagiarism Score is : {data.mean}<br />
+                Mean Plagiarism Score is :{data.mean ? data.mean : 0}<br />
                 <h1>MATCHED WITH : </h1>
                 {data && data.data.map((item, index) => {
                   return <div key={item.id}><div>{index + 1} CID : {item.id}</div>

@@ -13,6 +13,7 @@ import SihLogo from "./SihLogo";
 import ResearcHaven from "./ResearcHaven";
 import Login from "../Home/Login";
 import Register from "../Home/Register";
+import Logo from '../../Assets/svg/LogoBlack'
 import {
   Modal,
   ModalOverlay,
@@ -47,7 +48,8 @@ function Intro() {
             alignItems="center"
             justifyContent="center"
           >
-            <ResearcHaven/>
+            {/* <ResearchHaven/> */}
+            <Logo/>
             <Text
               textAlign="center"
               fontFamily="Poppins"
@@ -56,11 +58,11 @@ function Intro() {
             >
               a{" "}
               <u>
-                <span style={{ letterSpacing: "0.3rem" }}>webCrawling</span>
+                <span style={{ letterSpacing: "0.3rem" }}>seedmentor</span>
               </u>{" "}
               project
             </Text>
-            <SihLogo />
+            {/* <SihLogo /> */}
             {/* to show forms */}
             <Show below="md">
               {
@@ -79,7 +81,7 @@ function Intro() {
                     <ModalContent bg="#171717">
                       <ModalCloseButton />
                       <ModalBody>
-                        <Login show="" width="100%" />
+                        <Login show="" width="100%" alignItems="center"/>
                       </ModalBody>
 
                       <ModalFooter>

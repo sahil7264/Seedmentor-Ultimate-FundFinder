@@ -15,7 +15,7 @@ function Level2Report(props) {
     <Flex direction="column" ref={ref} bg="white" color="black" borderRadius="2rem" border="2px" p={4}>
       <div style={{fontSize:"20px"}}><b>Level 2 Report</b></div>
       <div>
-      <br />Mean Plagiarism Score is : {data.mean}<br />
+      <br />Mean Plagiarism Score is : {data.mean ? data.mean : 0}<br />
         <br />
         <h1>COMPARED WITH : </h1>
         {data &&

@@ -37,7 +37,7 @@ function Level1() {
           }
           p={4}
         >
-          {/* STATIC */}T
+          {/* STATIC */}
           <Text fontSize="3xl" w="100%" align="center">
             LEVEL 1
           </Text>
@@ -61,7 +61,7 @@ function Level1() {
               </Flex>
               {isLoading && <Spinner size="sm" color="gray" />}
               {!isLoading && <>
-              Mean Plagiarism Score is : {data.mean}<br/>
+              Mean Plagiarism Score is : {data.mean ? data.mean : 0}<br/>
               <h1>COMPARED WITH : </h1>
               {data && data.data.map((item,index)=>{
                 return <div key={item.id}><div>{index+1} CID : {item.id}</div>

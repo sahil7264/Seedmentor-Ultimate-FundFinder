@@ -1,12 +1,12 @@
 import React from 'react';
 import './Navbar.css';
 import Buttons from './Buttons';
-import WebCrawlers from './WebCrawlers';
+import Web from './Web';
 function Navbar(props) {
 
   return (
     <nav id="nav">
-      <WebCrawlers />
+      <Web />
       <Buttons />
     </nav>
   );

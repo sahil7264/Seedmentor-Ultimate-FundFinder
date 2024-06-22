@@ -13,7 +13,7 @@ import CancelIcon from "@mui/icons-material/Cancel";
 import { useFetch } from "../../../Hooks/useFetch";
 import { useNavigate } from "react-router-dom";
 function Level2(props) {
-    const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
   const toast = useToast();
   let url =
@@ -25,12 +25,13 @@ function Level2(props) {
   let isOkay = true;
   if (data) {
     console.log(data);
-    for(let i=0;i<data.data.length;i++){
-      if(data.data[i].plagiarism>20){
+    for (let i = 0; i < data.data.length; i++) {
+      if (data.data[i].plagiarism > 20) {
         isOkay = false;
         break;
-      }else{
-      isOkay = true;}
+      } else {
+        isOkay = true;
+      }
     }
   }
   const handleSubmit = async () => {
@@ -45,6 +46,7 @@ function Level2(props) {
       },
     });
     let data = await response.json();
+    console.log(data);
     if (data.success) {
       toast({
         title: "Success",
@@ -56,6 +58,7 @@ function Level2(props) {
       setIsSubmitting(false);
     }
   };
+  console.log(isSubmitting);
   return (
     <>
       <Flex
@@ -68,10 +71,10 @@ function Level2(props) {
           isLoading
             ? "gray"
             : !props.isRequired
-            ? "white"
-            : isOkay
-            ? "mediumseagreen"
-            : "tomato"
+              ? "white"
+              : isOkay
+                ? "mediumseagreen"
+                : "tomato"
         }
         p={4}
       >
@@ -96,12 +99,12 @@ function Level2(props) {
               </Flex>
               {isLoading && <Spinner size="sm" color="gray" />}
               {!isLoading && <>
-              Mean Plagiarism Score is : {data.mean}<br/>
-              <h1>MATCHED WITH : </h1>
-              {data && data.data.map((item,index)=>{
-                return <div key={item.id}><div>{index+1} CID : {item.id}</div>
-                <div>SIMILARITY SCORE: {item.plagiarism}</div></div>
-              })}
+                Mean Plagiarism Score is : {data.mean}<br />
+                <h1>MATCHED WITH : </h1>
+                {data && data.data.map((item, index) => {
+                  return <div key={item.id}><div>{index + 1} CID : {item.id}</div>
+                    <div>SIMILARITY SCORE: {item.plagiarism}</div></div>
+                })}
               </>}
             </Flex>
             {!isLoading && data && isOkay && (

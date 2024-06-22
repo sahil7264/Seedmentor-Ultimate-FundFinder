@@ -38,7 +38,7 @@ function Check() {
   }else if(error){
     alert(error);
   }
-  url="http://127.0.0.1:8000/level0googleplagiarism/"
+  url="https://seedmentor-nlp.onrender.com/level0googleplagiarism/"
   const handleSubmit = async()=>{
     setLoading(true);
     let response = await fetch(url,{

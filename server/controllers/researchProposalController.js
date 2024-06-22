@@ -228,7 +228,7 @@ const submitProposal = async (req, res) => {
             return res.json({ success: false, message: 'Research Proposal Not Found.' })
         }
         if (researchProposal.submitted) {
-            return res.json({ success: false, message: 'Research Proposal Already Submitted.' })
+            return res.json({ success: true, message: 'Research Proposal Already Submitted.' })
         }
         const user = await User.findOne({ _id: user_id })
         if (!user) {

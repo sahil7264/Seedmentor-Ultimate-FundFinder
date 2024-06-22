@@ -15,7 +15,7 @@ function ShowLevel0(props) {
     apikey: "AIzaSyBzLQiTsvKVY_HlF7qDn0o7OO-_HD-iyDc",
   };
   // fetching boody of the doucment
-  let url = "http://127.0.0.1:8000/level0googleplagiarism/";
+  let url = "https://seedmentor-nlp.onrender.com/level0googleplagiarism/";
   console.log(props);
   myObj.sus["sus_title"] = props.document.title;
   myObj.sus["sus_ps_obj"] = props.document.problem_statement_and_objectives;

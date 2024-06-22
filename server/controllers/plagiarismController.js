@@ -29,7 +29,7 @@ const levelOne = async (req, res) => {
         console.log(research_proposal);
         let sum = 0;
         for (let i = 0; i < allPublishedProposals.length; i++) {
-            const result = await fetch('http://127.0.0.1:8000/level1plagiarism/', {
+            const result = await fetch('https://seedmentor-nlp.onrender.com/level1plagiarism/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -78,7 +78,6 @@ const levelOne = async (req, res) => {
 
 const levelTwo = async (req, res) => {
     try {
-        console.log("request Received");
         const user_id = new ObjectId(req.user._id)
         const research_proposal_id = new ObjectId(req.params.id)
         const user = await User.findOne({ _id: user_id })
@@ -96,7 +95,7 @@ const levelTwo = async (req, res) => {
         const plagiarismReport = []
         let sum = 0;
         for (let i = 0; i < allPublishedProposals.length; i++) {
-            const result = await fetch('http://127.0.0.1:8000/checkplagiarism/', {
+            const result = await fetch('https://seedmentor-nlp.onrender.com/checkplagiarism/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

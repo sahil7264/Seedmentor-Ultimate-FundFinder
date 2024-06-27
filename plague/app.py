@@ -27,8 +27,8 @@ nltk.download('omw-1.4')
 nltk.download('averaged_perceptron_tagger')
 
 my_api_key = "AIzaSyC7Ih-uwksjlV2olBCMEmvPi_vC4PPI8Lk"
-# my_cse_id = "037c2615c9b2e4e0f"
 my_cse_id = "e5d8ed732c47f4925"
+
 def google_search_result(sus,type,apikey):
     my_api_key = apikey
     if type == 1:
